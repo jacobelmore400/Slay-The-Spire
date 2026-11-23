@@ -1,0 +1,8 @@
+bin/
+obj/
+dist/
+*.user
+*.pdb
+local.props
+sts2.dll
+SlayTheSpire2.pck
