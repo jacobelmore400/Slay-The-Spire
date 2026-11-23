@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AssemblyName>PinkCoinProgression</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sts2">
+      <HintPath>$(Sts2AssemblyPath)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="RequireGameAssembly" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(Sts2AssemblyPath)' == ''" Text="Set Sts2AssemblyPath to the full path of your installed sts2.dll." />
+    <Error Condition="!Exists('$(Sts2AssemblyPath)')" Text="Game assembly not found: $(Sts2AssemblyPath)" />
+  </Target>
+</Project>
