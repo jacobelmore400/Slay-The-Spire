@@ -1,0 +1,10 @@
+{
+  "id": "PinkCoinProgression",
+  "name": "Pink Coin Progression",
+  "author": "jacobelmore400",
+  "description": "Persistent Pink Coins, starting card shop and upgrade progression. Game integration in development.",
+  "version": "0.1.0",
+  "has_pck": false,
+  "has_dll": true,
+  "affects_gameplay": true
+}
